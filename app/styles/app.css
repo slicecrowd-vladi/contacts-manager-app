@@ -1,0 +1,155 @@
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  color: #333;
+}
+
+h4 {
+  margin: 0;
+}
+
+a, a:hover, a:focus {
+  color: #333;
+  text-decoration: none;
+}
+
+.page-wrapper {
+  display: table;
+  width: 100%;
+  min-height: 100vh;
+}
+
+.row-wrapper {
+  display: table-row;
+  height: 100%;
+}
+
+.page-col {
+  display: table-cell;
+  vertical-align: top;
+  height: 100%;
+  border-right: 1px solid #c2c4c5;
+}
+
+.contacts-left {
+  width: 20%;
+  background-color: #e4e6e8;
+}
+
+.contacts-middle {
+  width: 30%;
+  background-color: #F9F9F9;
+}
+
+.contacts-right {
+  width: 50%;
+  background-color: #fff;
+  border-right: none;
+}
+
+.col-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+   -webkit-box-align: center;
+      -ms-flex-align: center;
+  -ms-grid-row-align: center;
+         align-items: center;
+  height: 45px;
+  padding-left: 15px;
+  border-bottom: 1px solid #a3c3db;
+}
+
+.col-title h4 {
+  font-size: 21px;
+}
+
+.source-label {
+  margin: 0;
+  padding: 15px;
+  font-size: 17px;
+}
+
+.btn-toggle-contacts {
+  width: 100%;
+  height: 45px;
+  border: none;
+  /* background-color: #B9B0B0; */
+}
+
+.search-list {
+  width: 100%;
+  height: 100%;
+  padding-right: 20px;
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+
+.contacts-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.list-item {
+  padding-left: 15px;
+}
+
+.list-item + .list-item span {
+  border-top: 1px solid #e7e7e7;
+}
+
+.list-item.active {
+  background-color: #d8eefa;
+}
+
+.list-item.active + .list-item span {
+  border-top: none;
+}
+
+.list-item span {
+  display: inline-block;
+  width: 100%;
+  padding: 15px 15px 15px 0;
+  font-size: 17px;
+  font-weight: 500;
+}
+
+.single-contact {
+  padding: 30px;
+}
+
+.btn + .btn {
+  margin-left: 10px;
+}
+
+.single-contact {
+  margin-top: 30px;
+}
+
+.contact-attr {
+  margin-top: 30px;
+}
+
+.contact-attr-txt {
+  margin-bottom: 10px;
+  font-size: 17px;
+}
+
+.contact-attr-txt.name {
+  font-size: 45px;
+}
+
+.contact-attr-txt span:first-child,
+.contact-attr-txt label {
+  display: inline-block;
+  min-width: 150px;
+  font-size: 15px;
+  font-weight: 500;
+  color: #999;
+}
+
+.contact-edit {
+  padding: 30px;
+}

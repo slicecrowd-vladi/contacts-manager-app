@@ -1,0 +1,47 @@
+<div class="page-wrapper">
+  <div class="row-wrapper">
+    <div class="contacts-left page-col">
+      <div class="col-title">
+        <h4>Contacts</h4>
+      </div>
+      <div class="col-body">
+        <p class="source-label">All Contacts - {{curCount}} ({{contactsCount}})</p>
+        {{#unless showAll}}
+          <button class="btn-toggle-contacts btn btn-primary" {{action "showAllContacts"}}>Show Archived Contacts</button>
+        {{else}}
+          <button class="btn-toggle-contacts btn btn-primary" {{action "hideAllContacts"}}>Hide Archived Contacts</button>
+        {{/unless}}
+      </div>
+    </div>
+    <div class="contacts-middle page-col">
+      <div class="col-title">
+        <input class="search-list" type="text" name="search" placeholder="Search All Contacts">
+      </div>
+      <div class="col-body">
+        <ul class="contacts-list">
+          {{#each model as |contact|}}
+            {{#unless showAll}}
+              {{#unless contact.isarchived}}
+                {{#link-to "contacts.contact" contact class="list-item" tagName="li"}}
+                  <span>{{contact.firstname}} {{contact.lastname}}</span>
+                {{/link-to}}
+              {{/unless}}
+              {{else}}
+              {{#link-to "contacts.contact" contact class="list-item" tagName="li"}}
+                <span>{{contact.firstname}} {{contact.lastname}}</span>
+              {{/link-to}}
+            {{/unless}}
+          {{/each}}
+        </ul>
+      </div>
+    </div>
+    <div class="contacts-right page-col">
+      <div class="col-title">
+        <h4>Contact Info</h4>
+      </div>
+      <div class="col-body">
+        {{outlet}}
+      </div>
+    </div>
+  </div>
+</div>
